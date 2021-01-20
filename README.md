@@ -14,11 +14,11 @@
 `npm install`
 
 ## Discord Notification Setup
-You will access to a Discord Server. https://support.discord.com/hc/en-us/articles/204849977-How-do-I-create-a-server-
+You will access to a Discord Server. https://support.discord.com/hc/en-us/articles/204849977-How-do-I-create-a-server-  
 
-Use this guide to set up a Discord WebHook: https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks
+Use this guide to set up a Discord WebHook: https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks  
 
-finally, take the {webhook-url} from the previous step and set it in `config/prod/notifications.json`:
+finally, take the {webhook-url} from the previous step and set it in `config/prod/notifications.json`:  
 "url": "{webhook-url}"
 
 ## Usage
