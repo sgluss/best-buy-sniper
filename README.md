@@ -13,6 +13,14 @@
 ## Install
 `npm install`
 
+## Discord Notification Setup
+You will access to a Discord Server. https://support.discord.com/hc/en-us/articles/204849977-How-do-I-create-a-server-
+
+Use this guide to set up a Discord WebHook: https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks
+
+finally, take the {webhook-url} from the previous step and set it in `config/prod/notifications.json`:
+"url": "{webhook-url}"
+
 ## Usage
 <b>NOTE: By default the auto-checkout is disabled so there is no accidental purchasing. To enable auto-checkout uncomment the code found on `line: 368-370` in the `bestbuy.ts` file located in `src/pages`.</b>
 
