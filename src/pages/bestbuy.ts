@@ -224,7 +224,7 @@ export class BestBuy {
     await this.clickCheckoutButton();
 
     try {
-      await page.waitForSelector('.cia-guest-content .js-cia-guest-button', { timeout: 10000 });
+      await page.waitForSelector('.cia-guest-content__continue', { timeout: 10000 });
 
       logger.info('Checkout successful, starting order placement');
     } catch (error) {
@@ -232,7 +232,7 @@ export class BestBuy {
       logger.info('Refreshing and trying to checkout again');
 
       await Promise.all([
-        sendDiscordMessage({ message: `Checkout did not went through, trying again`, image: startingCheckoutScreenshotPath }),
+        sendDiscordMessage({ message: `Checkout did not go through, trying again`, image: startingCheckoutScreenshotPath }),
       ]);
 
       await this.checkout(true);
@@ -292,7 +292,7 @@ export class BestBuy {
 
     logger.info('Continuing as guest');
 
-    await page.click('.cia-guest-content .js-cia-guest-button');
+    await page.click('.cia-guest-content__continue');
 
     await page.waitForSelector('.checkout__container .fulfillment');
   }
